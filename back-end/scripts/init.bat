@@ -1,0 +1,4 @@
+SET POSTGRES_URL="localhost:5432"
+SET POSTGRES_USER="postgres"
+SET POSTGRES_PW="admin"
+SET POSTGRES_DB="movie_info"
