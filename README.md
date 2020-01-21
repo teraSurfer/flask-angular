@@ -18,7 +18,7 @@ init.bat
 ```
 
 ### To start application
-Go to movies folder in back-end and run
+Go to back-end and run
 ```
-py main.py
+flask run
 ```

@@ -1,2 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+$theme-colors: (
+    "dark": #252525
+);
+
+$body-bg: linear-gradient(-180deg,rgb(151, 161, 170) 10%,#daecf5 90%);
+
 @import "~bootstrap/scss/bootstrap.scss";

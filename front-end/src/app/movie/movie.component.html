@@ -1,0 +1,22 @@
+<div *ngIf="movie$" class="card border-0 shadow-sm">
+    <div class="card-header border-0 bg-dark text-light">
+        <h5 class="h mb-0">
+            Movie - {{movie$.name}}
+        </h5>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-4">
+                <img height="200px" width="200px" [src]="movie$.thumbnail" alt="movie_image" class="img-thumbnail">
+            </div>
+            <div class="col-sm-8">
+                <p class="lead mb-0">Movie App id:</p>
+                <p class="h6">{{movie$.id}}</p>
+                <p class="lead mb-0">Directed By:</p>
+                <p class="h6">{{movie$.director}}</p>
+                <p class="lead mb-0">Release Date:</p>
+                <p class="h6">{{movie$.release_date}}</p>
+            </div>
+        </div>
+    </div>
+</div>
