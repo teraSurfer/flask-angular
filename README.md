@@ -5,7 +5,7 @@ Run commands
 python -m venv venv
 ```
 ```
-cd back-end/venv/Scripts
+cd venv/Scripts
 ```
 ```
 activate.bat
