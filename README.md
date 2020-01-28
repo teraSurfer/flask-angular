@@ -2,10 +2,10 @@
 
 Run commands 
 ```
-python -m venv back-end/venv
+python -m venv venv
 ```
 ```
-cd back-end/venv/Scripts
+cd venv/Scripts
 ```
 ```
 activate.bat
@@ -16,7 +16,10 @@ cd ../../scripts
 ```
 init.bat
 ```
-
+to install requirements, go to movies folder and run:
+```
+pip install -r requirements.txt
+```
 ### To start application
 Go to back-end and run
 ```
