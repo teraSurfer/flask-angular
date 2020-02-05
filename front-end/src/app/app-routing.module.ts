@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { MovieComponent } from './movie/movie.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { MoviesComponent } from './movies/movies.component';
+import { UpsertMovieComponent } from './upsert-movie/upsert-movie.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,14 @@ const routes: Routes = [
   {
     path: 'movies',
     component: MoviesComponent
+  },
+  {
+    path: 'create-movie',
+    component: UpsertMovieComponent
+  },
+  {
+    path: 'update-movie/:id',
+    component: UpsertMovieComponent
   },
   {
     path: '**',

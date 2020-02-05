@@ -12,6 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { MoviesComponent } from './movies/movies.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { UpsertMovieComponent } from './upsert-movie/upsert-movie.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     NavbarComponent,
     MoviesComponent,
     NotFoundComponent,
+    UpsertMovieComponent,
   ],
   imports: [
     BrowserModule,

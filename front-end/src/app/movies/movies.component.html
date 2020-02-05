@@ -1,6 +1,5 @@
-
-<div *ngFor="let movie$ of movies" class="card border-0 shadow-sm">
-    <div class="card-header border-0 mb-2 bg-dark text-light">
+<div *ngFor="let movie$ of movies" class="card mb-2 border-0 shadow-sm">
+    <div class="card-header border-0 bg-dark text-light">
         <h5 class="h mb-0">
             Movie - {{movie$.name}}
         </h5>
@@ -21,6 +20,6 @@
         </div>
     </div>
     <div class="card-footer border-0">
-        <a [router-link]="['movies', movie$.id]" class="float-right btn btn-dark">View Movie</a>
+        <a [routerLink]="['/movies', movie$.id]" class="float-right btn btn-dark">View Movie</a>
     </div>
 </div>
