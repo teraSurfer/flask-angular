@@ -1,7 +1,9 @@
-from datetime import datetime as dt
+from datetime import date as dt
 from flask import current_app as app
 from flask import request, make_response, jsonify
+from flask_cors import cross_origin
 from movies.models.movie import Movie, MovieSchema
+from movies import db
 
 movies_schema = MovieSchema(many=True)
 movie_schema = MovieSchema()
@@ -22,3 +24,15 @@ def get_movies():
 def get_movie_by_id(id):
     movie = Movie.query.get(id)
     return movie_schema.jsonify(movie)
+
+@app.route("/movies", methods=["POST"])
+@cross_origin()
+def create_new_movie():
+    name = request.json['name']
+    release_date = dt.fromtimestamp(request.json['release_date'])
+    director = request.json['director']
+    thumbnail = request.json['thumbnail']
+    new_movie = Movie(name, director, thumbnail, release_date)
+    db.session.add(new_movie)
+    db.session.commit()
+    return movie_schema.jsonify(new_movie)
