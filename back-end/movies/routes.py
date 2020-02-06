@@ -36,3 +36,29 @@ def create_new_movie():
     db.session.add(new_movie)
     db.session.commit()
     return movie_schema.jsonify(new_movie)
+
+@app.route("/movies/<id>", methods=["DELETE"])
+def delete_movie(id):
+    movie = Movie.query.get(id)
+    db.session.delete(movie)
+    db.session.commit()
+    message = {'message': 'Deleted Successfully.'}
+    return make_response(jsonify(message), 200)
+
+@app.route("/movies/<id>", methods=["PUT"])
+def update_movie(id):
+    current_movie = Movie.query.get(id)
+
+    name = request.json['name']
+    release_date = dt.fromtimestamp(request.json['release_date'])
+    director = request.json['director']
+    thumbnail = request.json['thumbnail']
+
+    current_movie.name = name
+    current_movie.release_date = release_date
+    current_movie.director = director
+    current_movie.thumbnail = thumbnail
+
+    db.session.commit()
+
+    return movie_schema.jsonify(current_movie)
