@@ -1,0 +1,29 @@
+<div class="card border-0 shadow-sm">
+    <div class="card-header border-0 bg-dark text-light">
+        <h5 class="h mb-0">
+            Home - Movies App
+        </h5>
+    </div>
+    <div class="card-body">
+        <div class="text-center">
+        <div class="input-group mb-3 input-group-lg">
+            <input type="text" class="form-control" [(ngModel)]="movieId" placeholder="Search for a movie" aria-label="Movie" aria-describedby="find-movie">
+        </div>
+            <button (click)="findMovie()" class="btn btn-outline-dark">Find Movie</button>
+        </div>
+    </div>
+</div>
+<hr/> 
+<div class="card border-0 shadow-sm">
+    <div class="card-body">
+        <div class="list-group">
+            <h6 class="mb-0 list-group-item list-group-item-action">
+                Built using:
+            </h6>
+            <a href="http://flask.palletsprojects.com/en/1.1.x/" class="list-group-item list-group-item-action">Python - Flask</a>
+            <a href="https://www.sqlalchemy.org/" class="list-group-item list-group-item-action">SQLAlchemy</a>
+            <a href="https://www.postgresql.org/" class="list-group-item list-group-item-action">PostgreSQL</a>
+            <a href="https://angular.io" class="list-group-item list-group-item-action">Angular - 8</a>
+          </div>
+    </div>
+</div>
